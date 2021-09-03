@@ -13,6 +13,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.css">
   <link href="../codingchallenge/dist/hamburgers.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
 </head>
@@ -20,30 +21,33 @@
 <body>
   <script src="js/script.js"></script>
   <div class="mobile-navbar">
-    <div class="mobile-menu-button">
-      <button id="toggle-button" class="hamburger hamburger--spring dot" onclick="openMenu()" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner">
+    <div class="mobile-navbar-top">
+      <div class="mobile-menu-button">
+        <button id="toggle-button" class="hamburger hamburger--spring dot" onclick="openMenu()" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner">
+            </span>
           </span>
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
+    
     <div id="mobile-menu" class="mobile-menu">
         <nav class="mobile-menu-nav">
           <ul>
-            <li><a href="main.html">Home</a></li>
+            <li style="border-top: none;"><a href="main.html">Home</a></li>
             <li><a href="main.html">About</a></li>
             <li><a href="main.html">Services</a></li>
             <li><a href="main.html">News</a></li>
             <li><a href="main.html">0570 - 020210</a></li>
-            <li><button type="button" class="btn btn-primary btn-lg">Contact</button></li>
+            <li style="border-top: none; margin-top: 20px;"><a class="contact-button">Contact</a></li>
           </ul>
         </nav>   
     </div>
   </div>
   <div class="header" id="header">
     <div class="container">
-      <div class="row">
+      <div class="row header-padding">
         <div class="col-md-6">
           <div class="header__navbar">
             <div class="header__navbar--logo">
@@ -52,9 +56,9 @@
             <nav class="main-menu">
               <ul>
                 <li class="main-menu__item"><a href="main.html">Home</a></li>
-                <li class="main-menu__item"><a href="main.html">About</a></li>
-                <li class="main-menu__item"><a href="main.html">Services</a></li>
-                <li class="main-menu__item"><a href="main.html">News</a></li>
+                <li class="main-menu__item"><a href="#about">About</a></li>
+                <li class="main-menu__item"><a href="#services">Services</a></li>
+                <li class="main-menu__item"><a href="#news">News</a></li>
       
               </ul>
             </nav>
@@ -66,7 +70,7 @@
             <nav class="contact-menu">
               <ul>
                 <li class="contact-menu__item"><a href="main.html">0570 - 020210</a></li>
-                <li class="contact-menu__item"><button type="button" class="btn btn-primary btn-lg">Contact</button></li>
+                <li class="contact-menu__item"><a class="contact-button">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -74,27 +78,38 @@
       </div>
 
       <div class="row">
-        <div class="header__text">
-          <div class="header__text--title">
-            <h1>
-              GET YOUR COMPANY MOVING!
-            </h1>
-            <h5>
-              With our basic business WordPress template.
-            </h5>
-          </div>
-          <div class="line">
-          </div>
-          <div class="header__text--text">
-              <div class="col-md-6">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor rutrum, auctor erat ac, tempus magna.
-                  Curabitur tincidunt, leo eu placerat iaculis, purus mauris fermentum quam, a feugiat odio erat in massa.
-                  Mauris ac ultrices mauris, id tincidunt purus. Proin gravida euismod varius.
-                </p>
-              </div>
+        <div class="col-md-12 col-lg-8">
+          <div class="header__text">
+            <div class="header__text--title">
+              <h1>
+                GET YOUR COMPANY MOVING!
+              </h1>
+              <h5>
+                With our basic business WordPress template.
+              </h5>
+            </div>
+            <div class="line">
+            </div>
+            <div class="header__text--text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor rutrum, auctor erat ac, tempus magna.
+                Curabitur tincidunt, leo eu placerat iaculis, purus mauris fermentum quam, a feugiat odio erat in massa.
+                Mauris ac ultrices mauris, id tincidunt purus. Proin gravida euismod varius.
+              </p>
   
     
+      
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="scrollbutton">
+            <a href="#about">
+              <i class="bi bi-chevron-compact-down" style="font-size: 47px;"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -103,21 +118,22 @@
     
   <div class="content">
     <div class="container">
-      <div class="content__about">
+      <div class="content__about" id="about">
         <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="content__img">
+          <div class="col-md-5 order-2 order-md-1">
+            <div class="content__img ">
               <img class="img-responsive" src="../codingchallenge/resources/images/Pexels photo 2.jpg">
             </div>
           </div>
-          <div class="col-lg-6 offset-lg-1">
-            <div class="content__text">
-              <div class="content__about--text--title">
+          <div class="col-md-6 offset-md-1 order-1 order-md-2">
+            <div class="content__about">
+              <div class="content__about--title">
                 <h2>
                   About our company
                 </h2>
               </div>
-              <div class="content__about--text--body">
+
+              <div class="content__about--body">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dapibus libero, quis interdum mi.
                   Pellentesque maximus posuere faucibus. Pellentesque justo nunc, varius sit amet commodo et, mollis quis
@@ -125,7 +141,7 @@
                   volutpat. Proin rhoncus mi accumsan, luctus purus eu, dapibus mi. Phasellus et velit in nibh commodo
                   pharetra ut eget leo. Nulla congue ullamcorper condimentum.
                 </p>
-                <h5 style="font-family: 'Open Sans Bold'; color: darkgray; margin-top: 40px;">
+                <h5>
                   Lorem Ipsum
                 </h5>
                 <p>
@@ -134,7 +150,8 @@
                 </p>
               </div>
               <div class="content__about--button">
-                <button type="button" class="btn btn-primary btn-lg">Get started!</button>
+                <!--<button type="button" class="btn btn-primary btn-lg">Get started!</button>-->
+                <a href="main.html" class="getstarted">Get started!</a>
               </div>
             </div>
     
@@ -148,10 +165,10 @@
     </div>
 
     <div class="container">
-      <div class="content__services">
+      <div class="content__services" id="services">
         <div class="row">
           <div class="col-md-12">
-            <div class="content__services--title" style="color: #3366ff;">
+            <div class="title">
               <h2>
                 Our services
               </h2>
@@ -252,7 +269,7 @@
     </div>
     <div class="news">
       <div class="container">
-        <div class="newsbox">
+        <div class="newsbox" id="news">
           <div class="row">
             <div class="col-12">
               <div class="title">
@@ -290,7 +307,7 @@
                             </p>
                           </div>
                           <div class="item__text--textread">
-                            <a>
+                            <a href="main.html">
                               Read news article >
                             </a>
                           </div>
@@ -321,7 +338,7 @@
                             </p>
                           </div>
                           <div class="item__text--textread">
-                            <a>
+                            <a href="main.html">
                               Read news article >
                             </a>
                           </div>
@@ -351,7 +368,7 @@
                             </p>
                           </div>
                           <div class="item__text--textread">
-                            <a>
+                            <a href="main.html">
                               Read news article >
                             </a>
                           </div>
@@ -402,7 +419,7 @@
         <section class="testimonial">
           <div class="container">
             <div class="row">
-              <div class="col-12">
+              <div class="col-md-8 offset-md-2">
                 <div class="testimonial__wrap">
                   <div id="testimonials" class="splide">
                     <div class="splide__track">
@@ -422,12 +439,12 @@
                         <li class="splide__slide">
                           <div class="text">
                             <p>
-                              Dit is een test!
+                              What's 9+10? 21
                             </p>
                           </div>
                           <div class="author">
                             <p>
-                              Timothy
+                              stupid
                             </p>
                           </div>
                         </li>
@@ -461,7 +478,7 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
           <div class="companyname">
             <p class="title">
                 Company name
@@ -472,7 +489,7 @@
             </p>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
           <div class="navigation">
             <p class="title">
               Navigation
@@ -487,7 +504,7 @@
           </div>
 
         </div>
-        <div class="col-2">
+        <div class="col-3">
           <div class="information">
             <p class="title">
               Information
@@ -500,7 +517,7 @@
             </p>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
           <div class="contact">
             <p class="title">
               Contact
@@ -544,18 +561,6 @@
   </div>
 
   <script>
-    /*document.addEventListener( 'DOMContentLoaded', function () {
-      testimonials = new Splide( '.splide', {
-        type : 'loop',
-        pagination : 'true'
-      } ).mount();
-    } );
-    document.addEventListener( 'DOMContentLoaded', function () {
-      services = new Splide( '#services', {
-        type : 'loop',
-        pagination : 'true'
-      } ).mount();
-    } );*/
     var elms = document.getElementsByClassName( 'splide' );
         for ( var i = 0, len = elms.length; i < len; i++ ) {
           if(elms[i].id === "testimonials"){
@@ -565,10 +570,11 @@
             } ).mount();
           } else if(elms[i].id === "services"){
             new Splide( elms[ i ], {
-              loop : 'true',
+
               pagination: false,
               arrows: false,
               drag: false,
+              focus : "center",
               perPage : 3,
               breakpoints: {
                     992: {
@@ -592,6 +598,7 @@
               pagination: false,
               arrows: false,
               drag: false,
+              focus : "center",
               breakpoints: {
                  1200: {
                    perPage : 3,
