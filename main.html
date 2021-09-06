@@ -20,7 +20,8 @@
 
 <body>
   <script src="js/script.js"></script>
-  <div class="mobile-navbar">
+  <div id="mobile-menu" class="mobile-navbar">
+
     <div class="mobile-navbar-top">
       <div class="mobile-menu-button">
         <button id="toggle-button" class="hamburger hamburger--spring dot" onclick="openMenu()" type="button">
@@ -32,13 +33,13 @@
       </div>
     </div>
     
-    <div id="mobile-menu" class="mobile-menu">
-        <nav class="mobile-menu-nav">
+    <div class="mobile-menu">
+        <nav>
           <ul>
             <li style="border-top: none;"><a href="main.html">Home</a></li>
-            <li><a href="main.html">About</a></li>
-            <li><a href="main.html">Services</a></li>
-            <li><a href="main.html">News</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#news">News</a></li>
             <li><a href="main.html">0570 - 020210</a></li>
             <li style="border-top: none; margin-top: 20px;"><a class="contact-button">Contact</a></li>
           </ul>
@@ -308,7 +309,8 @@
                           </div>
                           <div class="item__text--textread">
                             <a href="main.html">
-                              Read news article >
+                              Read news article
+                              <i class="bi bi-chevron-compact-right" style="font-size: 16px; font-weight: 800;"></i>
                             </a>
                           </div>
                         </div>
@@ -339,7 +341,8 @@
                           </div>
                           <div class="item__text--textread">
                             <a href="main.html">
-                              Read news article >
+                              Read news article
+                              <i class="bi bi-chevron-compact-right" style="font-size: 16px; font-weight: 800;"></i>
                             </a>
                           </div>
                         </div>
@@ -369,7 +372,8 @@
                           </div>
                           <div class="item__text--textread">
                             <a href="main.html">
-                              Read news article >
+                              Read news article
+                              <i class="bi bi-chevron-compact-right" style="font-size: 16px; font-weight: 800;"></i>
                             </a>
                           </div>
                         </div>
@@ -398,8 +402,9 @@
                             </p>
                           </div>
                           <div class="item__text--textread">
-                            <a>
-                              Read news article >
+                            <a href="main.html">
+                              Read news article
+                              <i class="bi bi-chevron-compact-right" style="font-size: 16px; font-weight: 800;"></i>
                             </a>
                           </div>
                         </div>
@@ -479,22 +484,22 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <div class="companyname">
-            <p class="title">
+          <div>
+            <h5 class="title">
                 Company name
-            </p>
-            <p class="text">
+            </h5>
+            <p>
 
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo eget sapien molestie porttitor. Maecenas sed diam id risus pharetra fringilla. Nam congue lacinia nibh nec tristique. Duis a leo.
             </p>
           </div>
         </div>
         <div class="col-3">
-          <div class="navigation">
-            <p class="title">
+          <div>
+            <h5 class="title">
               Navigation
-            </p>
-            <p class="text">
+            <h5>
+            <p>
               Home <br>
               About<br>
               Services<br>
@@ -505,11 +510,11 @@
 
         </div>
         <div class="col-3">
-          <div class="information">
-            <p class="title">
+          <div>
+            <h5 class="title">
               Information
-            </p>
-            <p class="text">
+            </h5>
+            <p>
               FAQ <br>
               Privacy<br>
               Terms
@@ -518,11 +523,11 @@
           </div>
         </div>
         <div class="col-3">
-          <div class="contact">
-            <p class="title">
+          <div>
+            <h5 class="title">
               Contact
-            </p>
-            <p class="text">
+            </h5>
+            <p>
               Keulenstraat 12 <br>
               7418 ET Deventer<br>
               info@hoogdesign.nl<br>

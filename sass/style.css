@@ -49,6 +49,22 @@ body a {
   margin-bottom: -25px;
 }
 
+.scrollbutton:hover {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  border: solid white 2px;
+  background-color: #0F54D3;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 4px #000000;
+          box-shadow: 2px 2px 4px #000000;
+  margin-bottom: -25px;
+}
+
+.scrollbutton:hover i {
+  color: white;
+}
+
 .header {
   width: 100%;
   min-height: 500px;
@@ -69,11 +85,19 @@ body a {
 }
 
 .header .contact-button {
-  border: 1px solid white;
+  border: 3px solid white;
   width: 150px;
   border-radius: 30px;
   background-color: white;
   color: #0F54D3 !important;
+}
+
+.header .contact-button:hover {
+  border: 3px solid white;
+  width: 150px;
+  border-radius: 30px;
+  background-color: #0F54D3;
+  color: white !important;
 }
 
 .header__navbar {
@@ -178,23 +202,19 @@ body a {
 .mobile-navbar {
   z-index: 2;
   position: fixed;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
   width: 100%;
   height: 61px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #0F54D3 !important;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-}
-
-.mobile-navbar .mobile-navbar-top {
-  width: 100%;
-  height: 61px;
 }
 
 .mobile-navbar .contact-button {
@@ -203,6 +223,7 @@ body a {
   border-radius: 30px;
   background-color: white;
   text-align: center;
+  margin: 0px auto;
   color: #0F54D3 !important;
 }
 
@@ -213,24 +234,34 @@ body a {
 }
 
 .mobile-navbar .mobile-menu-button {
+  padding-right: 20px;
   text-align: right;
   color: white;
+  width: 100%;
+  height: 100%;
 }
 
 .mobile-navbar .mobile-menu {
+  border: 1px #0F54D3 solid;
+  border-radius: 0 0 0 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
+  float: right;
   opacity: 0;
   top: 61px;
-  width: 33%;
+  width: auto;
   height: auto;
   color: white;
   background-color: #0F54D3;
   text-align: right;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 400ms cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .mobile-navbar .mobile-menu a, .mobile-navbar .mobile-menu a:hover, .mobile-navbar .mobile-menu a:focus, .mobile-navbar .mobile-menu a:active {
@@ -245,10 +276,6 @@ body a {
   list-style-position: inside;
 }
 
-.mobile-navbar .mobile-menu .mobile-menu-main-nav {
-  width: 100%;
-}
-
 .mobile-navbar .mobile-menu li {
   border-top: 2px solid white;
 }
@@ -257,13 +284,32 @@ body a {
   padding-bottom: 10px;
 }
 
-.mobile-menu-active {
+.mobile-navbar .hamburger:hover {
+  opacity: 1;
+}
+
+.mobile-navbar .mobile-navbar-top {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 400ms cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.mobile-menu-active .mobile-menu {
   opacity: 1 !important;
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
       -ms-user-select: all !important;
           user-select: all !important;
   pointer-events: all !important;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.mobile-menu-active .mobile-navbar-top {
+  background-color: #0F54D3 !important;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .content {
@@ -344,9 +390,17 @@ body a {
 }
 
 .content__about--button .getstarted {
-  border: 10px solid #0F54D3;
+  border: 3px solid #0F54D3;
   border-radius: 30px;
   background-color: #0F54D3;
+  padding: 5px 100px 5px 100px;
+}
+
+.content__about--button .getstarted:hover {
+  border: 3px solid #0F54D3;
+  border-radius: 30px;
+  background-color: white;
+  color: #0F54D3;
   padding: 5px 100px 5px 100px;
 }
 
@@ -534,10 +588,15 @@ body a {
   padding-right: 20%;
 }
 
+.footer .title {
+  color: #0F54D3;
+  padding-bottom: 20px;
+}
+
 .footer .line {
   margin: 30px 0 30px 0;
   width: 100%;
-  border: solid #828282 1px;
+  border: solid #b9b9b9 1px;
 }
 
 .footer .icon {
