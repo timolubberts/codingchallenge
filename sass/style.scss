@@ -218,11 +218,6 @@ body{
         color: $clr-blue-2 !important;
     }
 
-    .dot{
-        background-color: $clr-blue-2;
-        border-radius: 25%;
-        display: inline-block;
-    }
     .mobile-menu-button{
         padding-right: 20px;
         text-align: right;
@@ -268,8 +263,7 @@ body{
         opacity: 1;
     }
     .mobile-navbar-top{
-        transform: translateY(100%);
-        transition: all 400ms cubic-bezier(0.55, 0, 0.1, 1);
+        background-color: $clr-blue-2;
     }
 
     
@@ -283,34 +277,23 @@ body{
         pointer-events: all !important;
         transform: translateX(0%);
     }
-    .mobile-navbar-top{
-        background-color: $clr-blue-2 !important;
-        transform: translateY(0%);
-    }
     
 }
 
-
-
-.content{
-    width:100%;
-    height: auto;
-    margin: 50px 0px;
-    background-image: url("../resources/images/Visual.svg");
-
+.about{
     &__img{
-                
+        &--img{
+            float: left;
+            width: 50%;
+            height: 100%;
+            
+        }
+        /**
         @media only screen and (min-width: 769px) {
             &--img{
                 float: left;
                 width: 50%;
                 height: 100%;
-                /*img{
-                    display: block;
-                    margin: 25px auto 0 auto;
-                    width: 80%;
-                    height: 80%;
-                }*/
                 
             }
         }
@@ -319,27 +302,76 @@ body{
                 float: left;
                 width: 100%;
                 height: 50%;
-                /*img{
-                    display: block;
-                    float: right;
-                    margin:auto;
-                    max-width: 100%;
-                    max-height: 100%;
-                }*/
-    
-                
             }
+        }
+        **/
+    }
+    &__title{
+        color: $clr-blue-2;
+        margin-bottom: 40px;
+    }
+    &__content{
+        color: $clr-grey-1
+    }
+    &__subtitle{
+        color: black;
+    }
+    &__button{
+        border: 3px solid $clr-blue-2;
+        color: white;
+        border-radius: 30px;
+        background-color: $clr-blue-2;
+        padding: 5px 100px 5px 100px;
+        &:hover{
+            background-color: white;
+            color: $clr-blue-2;
         }
     }
+}
+.services{
+    &__item{
+
+    }
+    &__img{
+        width: 32px;
+        height: 32px;
+    }
+    &__title{
+
+    }
+    &__subtitle{
+
+    }
+    &__content{
+
+    }
+    &__moreinfo{
+
+    }
+
+    .splide {
+        &__pagination {
+            bottom: 10px;
+            &__page {
+                background-color: $clr-blue-1;
+            }
+            .is-active {
+                background-color: $clr-blue-2;
+            }
+        }
+    
+    }
+}
+
+.content{
+    width:100%;
+    height: auto;
+    margin: 50px 0px;
+    background-image: url("../resources/images/Visual.svg");
+
     &__about{
         width:100%;
-        &--title{
-            h2{
-                color: $clr-blue-2;
-            }
 
-            margin-bottom: 40px;
-        }
 
 
     
@@ -391,18 +423,7 @@ body{
  
 
     &__services{
-        .splide {
-            &__pagination {
-                bottom: 10px;
-                &__page {
-                    background-color: $clr-blue-1;
-                }
-                .is-active {
-                    background-color: $clr-blue-2;
-                }
-            }
         
-        }
         .title{
             color: $clr-blue-2;
             height: 50px;
@@ -446,6 +467,48 @@ body{
     background-size: cover;
     background-position: center;
     padding: 60px 0 60px 0;
+
+    &__header{
+        color: white;
+        margin-bottom: 60px;
+    }
+
+    &__item{
+        background-color: white;
+        font-size: 12px;
+        height: auto;
+    }
+
+    &__img{
+        width: 100%;
+        height: 160px;
+        position: relative;
+            img {
+                object-fit: cover;
+                object-position: center center;
+                width: 100%;
+                height: 100%;
+            }
+    }
+    &__text{
+        padding: 15px;
+    }
+    &__date{
+        color: $clr-grey-1;
+    }
+
+    &__title{
+        height: 80px;
+    }
+
+    &__content{
+        color: $clr-grey-1
+
+    }
+
+    &__readmore{
+        color: $clr-blue-2;
+    }
     .splide {
         &__pagination {
             bottom: -20px;
@@ -458,72 +521,6 @@ body{
         }
     
     }
-
-    .newsbox{
-        .title{
-            color: white;
-            margin-bottom: 60px;
-        }
-        
-    
-        .item{
-            background-color: white;
-            font-size: 12px;
-            height: auto;
-            // width: 260px;
-
-            &__img{
-                width: 100%;
-                height: 160px;
-                position: relative;
-                    img {
-                        object-fit: cover;
-                        object-position: center center;
-                        width: 100%;
-                        height: 100%;
-                    }
-            }
-            &__text{
-                padding: 10px 20px 10px 20px;
-                font-size: 16px;
-                &--texttitle{
-                    height: 80px;
-                }
-                @media only screen and (max-width: 768px){
-                    &--textdate{
-                        color: $clr-grey-1;
-                    }
-        
-                    &--textcontent{
-                        padding-bottom: 50px;
-                        margin-top: 10px;
-                        color: $clr-grey-1
-                    }
-                    &--textread{
-
-                        color: $clr-blue-2;
-                    }
-                }
-                @media only screen and (min-width: 769px){
-                    &--textdate{
-                        color: $clr-grey-1;
-                    }
-        
-                    &--textcontent{
-                        padding-bottom: 5px;
-                        margin-top: 20px;
-                        color: $clr-grey-1
-                    }
-                    &--textread{
-                        padding-bottom: 10px;
-                        color: $clr-blue-2;
-                    }
-                }
-                
-            }
-
-        }
-    }
     
 }
 .testimonials{
@@ -531,11 +528,11 @@ body{
     width: 100%;
     color: $clr-grey-1;
     text-align: center;
-    .text{
+    &__text{
         text-align: center;
         margin: 80px 20% 0 20%;
     }
-    .author{
+    &__author{
         margin: 0 20% 0 20%;
         text-align: center;
         color: grey !important;
@@ -575,21 +572,19 @@ body{
     padding-top: 10%;
     color: $clr-grey-1;
     margin-bottom: 24px;
-    .companyname{
-        padding-right: 20%;
-    }
-    .title{
+
+    &__title{
         color: $clr-blue-2;
         padding-bottom: 20px;
     }
 
-    .line{
+    &__line{
         margin: 30px 0 30px 0;
         width: 100%;
         border: solid #b9b9b9 1px;
     }
 
-    .icon{
+    &__icon{
         float: right;
         margin-right: 24px;
         width: 24px;
