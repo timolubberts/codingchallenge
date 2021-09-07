@@ -17,7 +17,7 @@ body h1 {
   font-weight: 700;
 }
 
-body h2 {
+body h2, body h4 {
   font-weight: 700;
 }
 
@@ -27,17 +27,23 @@ body h5, body p, body a {
 
 body p {
   font-size: 14px;
+  color: #828282;
 }
 
 body a {
   text-decoration: none;
 }
 
-.header-padding {
-  padding-top: 30px;
+.header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 84, 211, 0.5)), to(rgba(15, 84, 211, 0.5))), url("../resources/images/Harbor.jpg");
+  background-image: linear-gradient(rgba(15, 84, 211, 0.5), rgba(15, 84, 211, 0.5)), url("../resources/images/Harbor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-.scrollbutton {
+.header__scrollbutton {
   width: 50px;
   height: 50px;
   margin: 0px auto;
@@ -49,19 +55,78 @@ body a {
   margin-bottom: -25px;
 }
 
-.scrollbutton:hover {
-  width: 50px;
-  height: 50px;
-  margin: 0px auto;
-  border: solid white 2px;
+.header__scrollbutton:hover {
   background-color: #0F54D3;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 2px 4px #000000;
-          box-shadow: 2px 2px 4px #000000;
-  margin-bottom: -25px;
 }
 
-.scrollbutton:hover i {
+.header__scrollbutton:hover i {
+  color: white;
+}
+
+.header__contactbutton {
+  border: 3px solid white;
+  width: 150px;
+  border-radius: 30px;
+  background-color: white;
+  color: #0F54D3 !important;
+}
+
+.header__contactbutton:hover {
+  background-color: #0F54D3;
+  color: white;
+}
+
+.header__nav {
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.header__nav ul {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.header__nav li {
+  display: inline;
+}
+
+.header__nav a, .header__nav a:hover, .header__nav a:focus, .header__nav a:active {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.header__nav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__logo {
+  display: block;
+  height: 64px;
+  width: 64px;
+}
+
+.header__content {
   color: white;
 }
 
@@ -76,28 +141,13 @@ body a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: white;
 }
 
 @media only screen and (max-width: 991px) {
   .header__navbar {
     display: none !important;
   }
-}
-
-.header .contact-button {
-  border: 3px solid white;
-  width: 150px;
-  border-radius: 30px;
-  background-color: white;
-  color: #0F54D3 !important;
-}
-
-.header .contact-button:hover {
-  border: 3px solid white;
-  width: 150px;
-  border-radius: 30px;
-  background-color: #0F54D3;
-  color: white !important;
 }
 
 .header__navbar {
@@ -147,7 +197,6 @@ body a {
 
 .header__navbar .main-menu ul {
   text-align: center;
-  color: white;
   margin-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,7 +209,6 @@ body a {
 
 .header__navbar .contact-menu ul {
   text-align: center;
-  color: white;
   margin-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,18 +221,13 @@ body a {
 
 .header__navbar .contact-menu a {
   margin-top: 10px;
-  color: white;
 }
 
 .header__text {
   width: auto;
+  color: white;
   min-width: 90%;
   margin: 75px 0 75px 0;
-  color: white;
-}
-
-.header__text--title {
-  color: white;
 }
 
 .header__text .line {
@@ -297,6 +340,11 @@ body a {
           transform: translateX(0%);
 }
 
+.about {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .about__img {
   /**
         @media only screen and (min-width: 769px) {
@@ -333,6 +381,7 @@ body a {
 }
 
 .about__subtitle {
+  margin-top: 30px;
   color: black;
 }
 
@@ -349,9 +398,30 @@ body a {
   color: #0F54D3;
 }
 
+.services {
+  margin-bottom: 100px;
+}
+
+.services__item {
+  margin: 20px 20px 20px 0;
+}
+
 .services__img {
   width: 32px;
   height: 32px;
+  margin-bottom: 30px;
+}
+
+.services__title {
+  margin-bottom: 30px;
+}
+
+.services__content {
+  margin: 30px 0 30px 0;
+}
+
+.services--blue {
+  color: #0F54D3;
 }
 
 .services .splide__pagination {
@@ -364,96 +434,6 @@ body a {
 
 .services .splide__pagination .is-active {
   background-color: #0F54D3;
-}
-
-.content {
-  width: 100%;
-  height: auto;
-  margin: 50px 0px;
-  background-image: url("../resources/images/Visual.svg");
-}
-
-.content__about {
-  width: 100%;
-}
-
-.content__about--body {
-  color: #828282;
-  text-align: left;
-  float: left;
-  padding-bottom: 40px;
-}
-
-.content__about--body h5 {
-  padding-top: 30px;
-  color: black;
-}
-
-.content__about--button {
-  width: 100%;
-  padding: 0 0 50px 0;
-}
-
-@media only screen and (max-width: 992px) {
-  .content__about--button {
-    text-align: center;
-  }
-}
-
-.content__about--button a {
-  color: white;
-  width: 200px;
-  height: 50px;
-}
-
-.content__about--button .getstarted {
-  border: 3px solid #0F54D3;
-  border-radius: 30px;
-  background-color: #0F54D3;
-  padding: 5px 100px 5px 100px;
-}
-
-.content__about--button .getstarted:hover {
-  border: 3px solid #0F54D3;
-  border-radius: 30px;
-  background-color: white;
-  color: #0F54D3;
-  padding: 5px 100px 5px 100px;
-}
-
-.content__services .title {
-  color: #0F54D3;
-  height: 50px;
-  margin: 50px 0 40px 0;
-}
-
-.content__services--img {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.content__services--img img {
-  width: 32px;
-  height: 32px;
-}
-
-.content__services--service {
-  padding-right: 7%;
-}
-
-.content__services--title {
-  height: 50px;
-  margin: 50px 0 40px 0;
-}
-
-.content__services--text {
-  width: 100%;
-  color: #828282;
-}
-
-.content__services--moreinfo {
-  margin: 40px 0 100px 0;
-  color: #0F54D3;
 }
 
 .news {
@@ -497,10 +477,12 @@ body a {
 
 .news__date {
   color: #828282;
+  font-style: italic;
 }
 
 .news__title {
   height: 80px;
+  color: black;
 }
 
 .news__content {
