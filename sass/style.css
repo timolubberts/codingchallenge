@@ -21,7 +21,7 @@ body h2, body h4 {
   font-weight: 700;
 }
 
-body h5, body p, body a {
+body h5, body a {
   font-weight: 600;
 }
 
@@ -41,6 +41,12 @@ body a {
   background-size: cover;
   background-position: center;
   color: white;
+  min-height: 50vh;
+  height: auto;
+}
+
+.header__text {
+  padding-top: 100px;
 }
 
 .header__scrollbutton {
@@ -73,10 +79,11 @@ body a {
 
 .header__contactbutton:hover {
   background-color: #0F54D3;
-  color: white;
+  color: white !important;
 }
 
 .header__nav {
+  opacity: 1;
   height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,6 +94,12 @@ body a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .header__nav {
+    opacity: 0;
+  }
 }
 
 .header__nav ul {
@@ -120,6 +133,10 @@ body a {
       flex-wrap: wrap;
 }
 
+.header__nav--right {
+  float: right;
+}
+
 .header__logo {
   display: block;
   height: 64px;
@@ -130,110 +147,22 @@ body a {
   color: white;
 }
 
-.header {
-  width: 100%;
-  min-height: 500px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 84, 211, 0.5)), to(rgba(15, 84, 211, 0.5))), url("../resources/images/Harbor.jpg");
-  background-image: linear-gradient(rgba(15, 84, 211, 0.5), rgba(15, 84, 211, 0.5)), url("../resources/images/Harbor.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-@media only screen and (max-width: 991px) {
-  .header__navbar {
-    display: none !important;
+@media only screen and (min-width: 768px) {
+  .header__content {
+    width: 70%;
   }
 }
 
-.header__navbar {
-  height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media only screen and (max-width: 767px) {
+  .header__content {
+    width: 100%;
+  }
 }
 
-.header__navbar ul {
-  list-style-type: none;
-}
-
-.header__navbar li {
-  display: inline;
-}
-
-.header__navbar a, .header__navbar a:hover, .header__navbar a:focus, .header__navbar a:active {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.header__navbar nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__navbar--logo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75px;
-  height: 75px;
-}
-
-.header__navbar .main-menu ul {
-  text-align: center;
-  margin-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 0;
-}
-
-.header__navbar .contact-menu ul {
-  text-align: center;
-  margin-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 0;
-}
-
-.header__navbar .contact-menu a {
-  margin-top: 10px;
-}
-
-.header__text {
-  width: auto;
-  color: white;
-  min-width: 90%;
-  margin: 75px 0 75px 0;
-}
-
-.header__text .line {
-  margin: 30px 0 30px 0;
-  width: 50%;
+.header__line {
   border: solid white 1px;
+  width: 50%;
+  margin: 20px 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -345,26 +274,6 @@ body a {
   margin-bottom: 100px;
 }
 
-.about__img {
-  /**
-        @media only screen and (min-width: 769px) {
-            &--img{
-                float: left;
-                width: 50%;
-                height: 100%;
-                
-            }
-        }
-        @media only screen and (max-width: 768px){
-            &--img{
-                float: left;
-                width: 100%;
-                height: 50%;
-            }
-        }
-        **/
-}
-
 .about__img--img {
   float: left;
   width: 50%;
@@ -416,12 +325,12 @@ body a {
   margin-bottom: 30px;
 }
 
-.services__content {
-  margin: 30px 0 30px 0;
+.services__title--blue {
+  color: #0F54D3;
 }
 
-.services--blue {
-  color: #0F54D3;
+.services__content {
+  margin: 30px 0 30px 0;
 }
 
 .services .splide__pagination {
