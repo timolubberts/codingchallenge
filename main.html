@@ -20,9 +20,9 @@
 
 <body>
 
-  <div id="mobile-menu" class="mobile-navbar">
-    <div class="mobile-navbar-top">
-      <div class="mobile-menu-button">
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__top">
+      <div class="mobile-menu__button">
         <button id="toggle-button" class="hamburger hamburger--spring dot" onclick="openMenu()" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner">
@@ -31,7 +31,7 @@
         </button>
       </div>
     </div>
-    <div class="mobile-menu">
+    <div class="mobile-menu__menu">
       <nav>
         <ul>
           <li style="border-top: none;"><a href="main.html">Home</a></li>
@@ -39,8 +39,11 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="main.html">0570 - 020210</a></li>
-          <li style="border-top: none; margin-top: 20px;"><a class="contact-button">Contact</a></li>
         </ul>
+        <div class="mobile-menu__contactbutton">
+          <a href="#">Contact</a>
+        </div>
+
       </nav>
     </div>
   </div>
@@ -100,106 +103,113 @@
     </div>
   </div>
 
-  <div id="about" class="about container">
-    <div class="row align-items-center">
-      <div class="col-md-5 order-2 order-md-1">
-        <div class="about__img">
-          <img class="img-responsive" src="../codingchallenge/resources/images/Pexels photo 2.jpg">
+  <div class="background-1">
+    <div id="about" class="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 order-2 order-lg-1">
+            <div class="about__img">
+              <img class="img-responsive" src="../codingchallenge/resources/images/Pexels photo 2.jpg">
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1 order-1 order-lg-2">
+            <h2 class="about__title">
+              About our company
+            </h2>
+            <p class="about__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dapibus libero, quis interdum mi.
+              Pellentesque maximus posuere faucibus. Pellentesque justo nunc, varius sit amet commodo et, mollis
+              quis
+              dui. Quisque ullamcorper orci faucibus elementum ultrices. Sed condimentum sodales dolor. Aliquam erat
+              volutpat. Proin rhoncus mi accumsan, luctus purus eu, dapibus mi. Phasellus et velit in nibh commodo
+              pharetra ut eget leo. Nulla congue ullamcorper condimentum.
+            </p>
+            <h5 class="about__subtitle">
+              Lorem Ipsum
+            </h5>
+            <p class="about__content">
+              Nam imperdiet leo non imperdiet lobortis. Aliquam et mauris iaculis, volutpat velit eu, lacinia mi.
+              Nunc a
+              semper nunc. Morbi ante velit, efficitur sit amet feugiat vel, porttitor vel turpis.
+            </p>
+            <a href="main.html" class="about__button">Get started!</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 offset-md-1 order-1 order-md-2">
-        <h2 class="about__title">
-          About our company
-        </h2>
-        <p class="about__content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non dapibus libero, quis interdum mi.
-          Pellentesque maximus posuere faucibus. Pellentesque justo nunc, varius sit amet commodo et, mollis
-          quis
-          dui. Quisque ullamcorper orci faucibus elementum ultrices. Sed condimentum sodales dolor. Aliquam erat
-          volutpat. Proin rhoncus mi accumsan, luctus purus eu, dapibus mi. Phasellus et velit in nibh commodo
-          pharetra ut eget leo. Nulla congue ullamcorper condimentum.
-        </p>
-        <h5 class="about__subtitle">
-          Lorem Ipsum
-        </h5>
-        <p class="about__content">
-          Nam imperdiet leo non imperdiet lobortis. Aliquam et mauris iaculis, volutpat velit eu, lacinia mi.
-          Nunc a
-          semper nunc. Morbi ante velit, efficitur sit amet feugiat vel, porttitor vel turpis.
-        </p>
-        <a href="main.html" class="about__button">Get started!</a>
-      </div>
+      
     </div>
-  </div>
-
-  <div id="services" class="services container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="services__title services__title--blue">
-          Our services
-        </h2>
-        <p class="services__subtitle">
-          We provide some awesome services, check them out!
-        </p>
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-lg-12">
-        <div id="services-slide" class="splide">
-          <div class="splide__track">
-            <div class="splide__list">
-              <div class="splide__slide">
-                <div class="services__item">
-                  <div class="services__img">
-                    <img class="img-responsive" src="../codingchallenge/resources/images/refresh.png">
+  
+    <div id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="services__title services__title--blue">
+              Our services
+            </h2>
+            <p class="services__subtitle">
+              We provide some awesome services, check them out!
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div id="services-slide" class="splide">
+              <div class="splide__track">
+                <div class="splide__list">
+                  <div class="splide__slide">
+                    <div class="services__item">
+                      <div class="services__img">
+                        <img class="img-responsive" src="../codingchallenge/resources/images/refresh.png">
+                      </div>
+                      <h4 class="services__title">
+                        Monthly updates
+                      </h4>
+                      <p class="services__content">
+                        Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
+                        pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
+                        tristique id risus et, rhoncus auctor purus.
+                      </p>
+                      <a href="main.html" class="services__moreinfo">
+                        More information
+                      </a>
+                    </div>
                   </div>
-                  <h4 class="services__title">
-                    Monthly updates
-                  </h4>
-                  <p class="services__content">
-                    Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
-                    pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
-                    tristique id risus et, rhoncus auctor purus.
-                  </p>
-                  <a href="main.html" class="services__moreinfo">
-                    More information
-                  </a>
-                </div>
-              </div>
-              <div class="splide__slide">
-                <div class="services__item">
-                  <div class="services__img">
-                    <img class="img-responsive" src="../codingchallenge/resources/images/verified.png">
+                  <div class="splide__slide">
+                    <div class="services__item">
+                      <div class="services__img">
+                        <img class="img-responsive" src="../codingchallenge/resources/images/verified.png">
+                      </div>
+                      <h4 class="services__title">
+                        Monthly updates
+                      </h4>
+                      <p class="services__content">
+                        Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
+                        pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
+                        tristique id risus et, rhoncus auctor purus.
+                      </p>
+                      <a href="main.html" class="services__moreinfo">
+                        More information
+                      </a>
+                    </div>
                   </div>
-                  <h4 class="services__title">
-                    Monthly updates
-                  </h4>
-                  <p class="services__content">
-                    Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
-                    pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
-                    tristique id risus et, rhoncus auctor purus.
-                  </p>
-                  <a href="main.html" class="services__moreinfo">
-                    More information
-                  </a>
-                </div>
-              </div>
-              <div class="splide__slide">
-                <div class="services__item">
-                  <div class="services__img">
-                    <img class="img-responsive" src="../codingchallenge/resources/images/maintenance.png">
+                  <div class="splide__slide">
+                    <div class="services__item">
+                      <div class="services__img">
+                        <img class="img-responsive" src="../codingchallenge/resources/images/maintenance.png">
+                      </div>
+                      <h4 class="services__title">
+                        Monthly updates
+                      </h4>
+                      <p class="services__content">
+                        Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
+                        pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
+                        tristique id risus et, rhoncus auctor purus.
+                      </p>
+                      <a href="main.html" class="services__moreinfo">
+                        More information
+                      </a>
+                    </div>
                   </div>
-                  <h4 class="services__title">
-                    Monthly updates
-                  </h4>
-                  <p class="services__content">
-                    Duis eget tempus augue, ut auctor nunc. Cras pretium tempus ornare. Curabitur dictum
-                    pellentesque dapibus. Nunc vitae urna vitae ante fringilla tincidunt. In ante lectus,
-                    tristique id risus et, rhoncus auctor purus.
-                  </p>
-                  <a href="main.html" class="services__moreinfo">
-                    More information
-                  </a>
                 </div>
               </div>
             </div>
@@ -208,7 +218,7 @@
       </div>
     </div>
   </div>
-
+  
   <div id="news" class="news">
     <div class="container">
       <div class="row">
@@ -322,39 +332,41 @@
       </div>
     </div>
   </div>
-
-  <div class="testimonials container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <div id="testimonials-slide" class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <p class="testimonials__text">
-                  "Bedankt voor de snelle en professionele afhandeling bij het maken van onze nieuwe website. Alles
-                  was binnen no-time geregeld zonder mankementen en vragen."
-                </p>
-                <p class="testimonials__author">
-                  Tom Dijkslag, Front-end developer at Hoogdesign
-                </p>
-              </li>
-              <li class="splide__slide">
-                <p class="testimonials__text">
-                  What's 9+10? 21
-                </p>
-                <p class="testimonials__author">
-                  stupid
-                </p>
-              </li>
-              <li class="splide__slide">
-                <p class="testimonials__text">
-                  Spell "stun seed" backwards
-                </p>
-                <p class="testimonials__author">
-                  Tim
-                </p>
-              </li>
-            </ul>
+  
+  <div class="testimonials background-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div id="testimonials-slide" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <p class="testimonials__text">
+                    "Bedankt voor de snelle en professionele afhandeling bij het maken van onze nieuwe website. Alles
+                    was binnen no-time geregeld zonder mankementen en vragen."
+                  </p>
+                  <p class="testimonials__author">
+                    Tom Dijkslag, Front-end developer at Hoogdesign
+                  </p>
+                </li>
+                <li class="splide__slide">
+                  <p class="testimonials__text">
+                    What's 9+10? 21
+                  </p>
+                  <p class="testimonials__author">
+                    stupid
+                  </p>
+                </li>
+                <li class="splide__slide">
+                  <p class="testimonials__text">
+                    Spell "stun seed" backwards
+                  </p>
+                  <p class="testimonials__author">
+                    Tim
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -364,16 +376,16 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-lg-6 col-12">
           <h5 class="footer__title">
             Company name
           </h5>
-          <p>
+          <p class="footer__company">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo eget sapien molestie porttitor.
             Maecenas sed diam id risus pharetra fringilla. Nam congue lacinia nibh nec tristique. Duis a leo.
           </p>
         </div>
-        <div class="col-3">
+        <div class="col-lg-2 col-4">
           <h5 class="footer__title">
             Navigation
           </h5>
@@ -386,7 +398,7 @@
           </p>
               
         </div>
-        <div class="col-3">
+        <div class="col-lg-2 col-4">
           <h5 class="footer__title">
             Information
           </h5>
@@ -396,7 +408,7 @@
             Terms
           </p>
         </div>
-        <div class="col-3">
+        <div class="col-lg-2 col-4">
           <h5 class="footer__title">
             Contact
           </h5>
@@ -504,12 +516,12 @@
       var menu = document.getElementById("mobile-menu");
       var toggleButton = document.getElementById("toggle-button");
 
-      if (menu.classList.contains("mobile-menu-active")) {
+      if (menu.classList.contains("mobile-menu--active")) {
         toggleButton.classList.remove("is-active");
-        menu.classList.remove("mobile-menu-active");
+        menu.classList.remove("mobile-menu--active");
       } else {
         toggleButton.classList.add("is-active");
-        menu.classList.add("mobile-menu-active");
+        menu.classList.add("mobile-menu--active");
       }
     }
   </script>
