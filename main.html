@@ -390,11 +390,11 @@
             Navigation
           </h5>
           <p>
-            Home <br>
-            About<br>
-            Services<br>
-            News<br>
-            Contact
+            <a class="footer__link footer__link--active" href="main.html">Home</a><br>
+            <a class="footer__link" href="#about">About</a><br>
+            <a class="footer__link" href="#services">Services</a><br>
+            <a class="footer__link" href="#news">News</a><br>
+            <a class="footer__link" href="main.html">Contact</a>
           </p>
               
         </div>
@@ -403,9 +403,9 @@
             Information
           </h5>
           <p>
-            FAQ <br>
-            Privacy<br>
-            Terms
+            <a class="footer__link" href="#about">FAQ</a><br>
+            <a class="footer__link" href="#about">Privacy</a><br>
+            <a class="footer__link" href="#about">Terms</a>
           </p>
         </div>
         <div class="col-lg-2 col-4">
@@ -455,7 +455,10 @@
       if (elms[i].id === "testimonials-slide") {
         new Splide(elms[i], {
           type: 'loop',
-          pagination: 'true'
+          pagination: true,
+          arrows: false,
+          autoplay: true,
+          interval: 10000
         }).mount();
       } else if (elms[i].id === "services-slide") {
         new Splide(elms[i], {

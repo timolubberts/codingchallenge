@@ -9,6 +9,7 @@
 }
 
 body {
+  letter-spacing: 1px;
   font-family: 'Open Sans';
   line-height: 2rem;
 }
@@ -438,17 +439,19 @@ body a {
 
 .testimonials {
   text-align: center;
-  padding-bottom: 300px;
+  padding-bottom: 400px;
 }
 
 .testimonials__text {
   text-align: center;
-  margin: 80px 20% 0 20%;
+  font-size: 20px;
+  margin: 100px 10% 0 10%;
 }
 
 .testimonials__author {
-  margin: 0 20% 0 20%;
   text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
   color: grey !important;
 }
 
@@ -495,9 +498,22 @@ body a {
 }
 
 .footer__line {
-  margin: 30px 0 30px 0;
+  margin: 50px 0px;
   width: 100%;
   border: solid #b9b9b9 1px;
+}
+
+.footer__link {
+  font-weight: 400;
+  color: #828282;
+}
+
+.footer__link:hover {
+  color: #0F54D3;
+}
+
+.footer__link--active {
+  color: #0F54D3;
 }
 
 .footer__icon {
