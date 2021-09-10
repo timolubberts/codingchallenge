@@ -10,8 +10,9 @@
 
 body {
   letter-spacing: 1px;
+  overflow-x: hidden;
   font-family: 'Open Sans';
-  line-height: 2rem;
+  line-height: 2;
 }
 
 body h1 {
@@ -27,7 +28,8 @@ body h5, body a {
 }
 
 body p {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
   color: #828282;
 }
 
@@ -61,14 +63,22 @@ body a {
   -webkit-box-shadow: 2px 2px 4px #000000;
           box-shadow: 2px 2px 4px #000000;
   margin-bottom: -25px;
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
+}
+
+.header__scrollbutton svg {
+  width: 50%;
+  height: 70%;
+  margin: 9px 11px;
 }
 
 .header__scrollbutton:hover {
   background-color: #0F54D3;
 }
 
-.header__scrollbutton:hover i {
-  color: white;
+.header__scrollbutton:hover svg {
+  fill: white;
 }
 
 .header__contactbutton {
@@ -77,6 +87,8 @@ body a {
   border-radius: 30px;
   background-color: white;
   color: #0F54D3 !important;
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
 }
 
 .header__contactbutton:hover {
@@ -120,6 +132,17 @@ body a {
 
 .header__nav li {
   display: inline;
+  -webkit-transition: 100ms linear;
+  transition: 100ms linear;
+}
+
+.header__nav--active {
+  border-bottom: 1px solid white;
+}
+
+.header__nav li:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .header__nav a, .header__nav a:hover, .header__nav a:focus, .header__nav a:active {
@@ -150,13 +173,13 @@ body a {
   color: white;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1201px) {
   .header__content {
     width: 70%;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
   .header__content {
     width: 100%;
   }
@@ -322,6 +345,8 @@ body a {
   border-radius: 30px;
   background-color: #0F54D3;
   padding: 5px 80px 5px 80px;
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
 }
 
 .about__button:hover {
@@ -383,7 +408,12 @@ body a {
 
 .news__item {
   background-color: white;
-  height: auto;
+  margin: 15px 15px;
+}
+
+.news__item:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #333333 0px 0px 0px 3px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #333333 0px 0px 0px 3px;
 }
 
 .news__img {
@@ -419,10 +449,20 @@ body a {
 
 .news__content {
   color: #828282;
+  height: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .news__readmore {
   color: #0F54D3;
+}
+
+.news__readmore img {
+  width: 13px;
+  height: 13px;
+  margin: 9px 0px;
 }
 
 .news .splide__pagination {
@@ -440,6 +480,12 @@ body a {
 .testimonials {
   text-align: center;
   padding-bottom: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonials {
+    padding-bottom: 150px;
+  }
 }
 
 .testimonials__text {
